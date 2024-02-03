@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>诶~整碗铁牛牛肉面你尝尝</title>
+  <style>
+    #chat-box {
+      height: 300px;
+      overflow-y: scroll;
+      border: 1px solid #ccc;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <label for="name-input">设置你的名字（如果不设置，则使用默认名字）:</label>
+  <input type="text" id="name-input" placeholder="输入你的名字">
+  <button onclick="setName()">设置新名字</button>
+  <span id="current-name">Current Name: You</span>
+
+  <div id="chat-box"></div>
+  <input type="text" id="message-input" placeholder="输入消息...." onkeypress="handleKeyPress(event)">
+  <button onclick="sendMessage()">发送</button>
+
+  <script>
+    // 初始化名字
+    var userName = localStorage.getItem('userName') || '默认名字';
+
+    // 设置名字
+    function setName() {
+      var nameInput = document.getElementById("name-input");
+      var currentNameSpan = document.getElementById("current-name");
+
+      var name = nameInput.value.trim();
+
+      if (name !== "") {
+        userName = name;
+        localStorage.setItem('userName', userName);
+      } else {
+        userName = '默认名字';
+        localStorage.removeItem('userName');
+      }
+
+      nameInput.value = "";
+      currentNameSpan.textContent = `设置为: ${userName}`;
+    }
+
+    function handleKeyPress(event) {
+      if (event.key === 'Enter') {
+        event.preventDefault();
+        sendMessage();
+      }
+    }
+
+    function sendMessage() {
+      var messageInput = document.getElementById("message-input");
+      var message = messageInput.value;
+      var send="https://api.day.app/FKGE3ZtABLLjbV5LmDxrCE/"
+
+      if (message.trim() !== "") {
+        appendMessage(userName, message);
+        //saveMessageToDatabase(userName, message);
+        messageInput.value = "";
+        fetch(send +'hdmzw.online --- '+userName+':'+ message,{method:'GET',mode:'no-cors'})
+      }
+    }
+
+    function appendMessage(sender, message) {
+      var chatBox = document.getElementById("chat-box");
+      var newMessage = document.createElement("p");
+      newMessage.textContent = `${sender}: ${message}`;
+      chatBox.appendChild(newMessage);
+    }
+
+    function saveMessageToDatabase(sender, message) {
+      fetch('/save-message', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ sender: sender, message: message }),
+      })
+      .then(response => response.json())
+      .then(data => console.log(data))
+      .catch(error => console.error('Error:', error));
+    }
+
+    // 获取历史消息
+    // fetch('/get-messages')
+    //   .then(response => response.json())
+    //   .then(messages => {
+    //     messages.forEach(message => {
+    //       appendMessage(message.sender, message.message);
+    //     });
+    //   })
+    //   .catch(error => console.error('Error:', error));
+
+    // 在初始化时更新当前名字的显示
+    document.getElementById("current-name").textContent = `当前名字: ${userName}`;
+  </script>
+</body>
+</html>
