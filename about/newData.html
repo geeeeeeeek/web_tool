@@ -10,16 +10,32 @@
       overflow-y: scroll;
       border: 1px solid #ccc;
       padding: 10px;
+      background-color:aliceblue;
+    }
+    body{
+        background-image:url(ys.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-color: beige;
+        background-attachment: fixed;
+        justify-content: center;
+
+    }
+    .textt{
+        color:azure;
+        font-style:normal;
+        font-size: 20px;
     }
   </style>
 </head>
 <body>
-  <label for="name-input">设置你的名字（如果不设置，则使用默认名字）:</label>
+  <label for="name-input" class="textt">设置你的名字（如果不设置，则使用默认名字）:</label>
   <input type="text" id="name-input" placeholder="输入你的名字">
   <button onclick="setName()">设置新名字</button>
-  <span id="current-name">Current Name: You</span>
+  <span id="current-name" class="textt">Current Name: You</span>
 
-  <div id="chat-box"></div>
+  <div id="chat-box" >记录...</div>
   <input type="text" id="message-input" placeholder="输入消息...." onkeypress="handleKeyPress(event)">
   <button onclick="sendMessage()">发送</button>
 
