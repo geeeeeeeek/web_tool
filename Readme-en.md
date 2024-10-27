@@ -1,23 +1,23 @@
-# 基于html开发的在线网址导航
+# A web site navigation application based on javascript, html and css development.
 
-## 部署步骤
+## Deployment steps
 
-将全部文件复制到服务器，入口文件是index.html
+Copy all files to the server, the entry file is index.html
 
 
-## 在线预览
+## Preview
 
 https://geeeeeeeek.github.io/web_tool/
 
 
-## 二次开发
+## Secondary development
 
-1. 如需修改网址，可修改index.html
+If you want to modify the URL, you can modify index.html.
 
-2. 如需修改关于页面，可修改about里面的index页面
+If you want to modify the about page, you can modify the index page in about folder.
 
 
-## 参考资料
+## Reference
 
 - https://web-tool-omega.vercel.app/
 
