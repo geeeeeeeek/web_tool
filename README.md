@@ -1,6 +1,6 @@
 # 基于html开发的在线网址导航
 
-[En](./Readme-en.md)
+[English Doc](./Readme-en.md)
 
 ## 部署步骤
 
