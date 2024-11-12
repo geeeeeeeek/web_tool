@@ -1,4 +1,4 @@
-# A web site navigation application based on javascript, html and css development.
+# A web site navigation application based on Javascript, Html and CSS development.
 
 ## Deployment steps
 
