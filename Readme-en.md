@@ -26,3 +26,5 @@ If you want to modify the about page, you can modify the index page in about fol
 - https://hrzhanghuan.com
 
 - https://fktool.com
+
+Have a nice day!
