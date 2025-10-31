@@ -25,6 +25,6 @@ https://geeeeeeeek.github.io/web_tool/
 
 - https://web-a55.pages.dev/
 
-- https://hrzhanghuan.com
+- https://web.gitapp.cn/
 
 
