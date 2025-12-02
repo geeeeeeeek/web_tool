@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="theme-color" content="#f9f9f9" />
+    <title>网址提交 - 在线工具网</title>
+    <link rel="shortcut icon" href="./assets/images/favicon.png" />
+    <meta name="keywords" content="网址提交,网站收录,在线工具网" />
+    <meta name="description" content="提交您的优质网站，加入在线工具网址导航" />
+
+    <link rel="stylesheet" id="block-library-css"
+        href="./assets/css/block-library.min-5.6.2.css" type="text/css" media="all" />
+    <link rel="stylesheet" id="iconfont-css" href="./assets/css/iconfont-3.03029.1.css"
+        type="text/css" media="all" />
+    <link rel="stylesheet" id="bootstrap-css" href="./assets/css/bootstrap.min-4.3.1.css"
+        type="text/css" media="all" />
+    <link rel="stylesheet" id="iowen-css" href="./assets/css/style-3.03029.1.css"
+        type="text/css" media="all" />
+    <link rel="stylesheet" id="custom-css" href="./assets/css/custom-style.css"
+        type="text/css" media="all" />
+    <link rel="stylesheet" id="fortawesome-css" href="./assets/fontawesome-5.15.4/css/all.min.css" type="text/css" />
+
+    <style>
+        .submit-container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 30px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .submit-header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+
+        .submit-header h1 {
+            font-size: 28px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .submit-header p {
+            color: #666;
+            font-size: 14px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: 500;
+        }
+
+        .form-group label .required {
+            color: #ff4444;
+            margin-left: 3px;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 10px 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+            transition: border-color 0.3s;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: #4CAF50;
+        }
+
+        .form-control.error {
+            border-color: #ff4444;
+        }
+
+        textarea.form-control {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .error-message {
+            color: #ff4444;
+            font-size: 12px;
+            margin-top: 5px;
+            display: none;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 12px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .submit-btn:hover {
+            background: #45a049;
+        }
+
+        .submit-btn:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+
+        .back-home {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .back-home a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+
+        .back-home a:hover {
+            text-decoration: underline;
+        }
+
+        .success-message {
+            background: #d4edda;
+            color: #155724;
+            padding: 15px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            display: none;
+        }
+
+        .guidelines {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 4px;
+            margin-bottom: 30px;
+        }
+
+        .guidelines h3 {
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .guidelines ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+
+        .guidelines li {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+
+        .char-count {
+            text-align: right;
+            font-size: 12px;
+            color: #999;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+
+<body class="io-grey-mode">
+    <div class="submit-container">
+        <div class="submit-header">
+            <h1><i class="fas fa-paper-plane"></i> 网址提交</h1>
+            <p>提交您的优质网站，我们将在审核后收录到网址导航中</p>
+        </div>
+
+        <div class="success-message" id="successMessage">
+            <i class="fas fa-check-circle"></i> 提交成功！我们会尽快审核您的网站。
+        </div>
+
+        <div class="guidelines">
+            <h3><i class="fas fa-info-circle"></i> 提交须知</h3>
+            <ul>
+                <li>请确保网站内容合法、健康，符合相关法律法规</li>
+                <li>网站应正常访问，不含恶意代码或病毒</li>
+                <li>提供真实有效的网站信息，便于我们审核</li>
+                <li>我们会在3-5个工作日内完成审核，审核结果将通过邮件通知</li>
+            </ul>
+        </div>
+
+        <form id="submitForm">
+            <div class="form-group">
+                <label for="siteName">
+                    网站名称<span class="required">*</span>
+                </label>
+                <input type="text" id="siteName" name="siteName" class="form-control"
+                       placeholder="请输入网站名称" maxlength="50" required>
+                <div class="error-message" id="siteNameError">请输入网站名称</div>
+            </div>
+
+            <div class="form-group">
+                <label for="siteUrl">
+                    网站地址<span class="required">*</span>
+                </label>
+                <input type="url" id="siteUrl" name="siteUrl" class="form-control"
+                       placeholder="https://example.com" required>
+                <div class="error-message" id="siteUrlError">请输入正确的网址格式</div>
+            </div>
+
+            <div class="form-group">
+                <label for="category">
+                    网站分类<span class="required">*</span>
+                </label>
+                <select id="category" name="category" class="form-control" required>
+                    <option value="">请选择分类</option>
+                    <option value="常用工具">常用工具</option>
+                    <option value="科研办公">科研办公</option>
+                    <option value="开发设计">开发设计</option>
+                    <option value="效率办公">效率办公</option>
+                    <option value="社交媒体">社交媒体</option>
+                    <option value="资源下载">资源下载</option>
+                    <option value="生活服务">生活服务</option>
+                    <option value="学习教育">学习教育</option>
+                    <option value="其他">其他</option>
+                </select>
+                <div class="error-message" id="categoryError">请选择网站分类</div>
+            </div>
+
+            <div class="form-group">
+                <label for="description">
+                    网站描述<span class="required">*</span>
+                </label>
+                <textarea id="description" name="description" class="form-control"
+                          placeholder="简要描述网站的主要功能和特点"
+                          maxlength="200" required></textarea>
+                <div class="char-count">
+                    <span id="descCount">0</span>/200
+                </div>
+                <div class="error-message" id="descriptionError">请输入网站描述</div>
+            </div>
+
+            <div class="form-group">
+                <label for="keywords">
+                    关键词
+                </label>
+                <input type="text" id="keywords" name="keywords" class="form-control"
+                       placeholder="用逗号分隔，如：工具,在线,免费" maxlength="100">
+            </div>
+
+            <div class="form-group">
+                <label for="email">
+                    联系邮箱<span class="required">*</span>
+                </label>
+                <input type="email" id="email" name="email" class="form-control"
+                       placeholder="用于接收审核结果通知" required>
+                <div class="error-message" id="emailError">请输入正确的邮箱地址</div>
+            </div>
+
+            <div class="form-group">
+                <label for="contact">
+                    联系方式
+                </label>
+                <input type="text" id="contact" name="contact" class="form-control"
+                       placeholder="QQ、微信或其他联系方式（选填）" maxlength="50">
+            </div>
+
+            <button type="submit" class="submit-btn" id="submitBtn">
+                <i class="fas fa-paper-plane"></i> 提交网站
+            </button>
+        </form>
+
+        <div class="back-home">
+            <a href="/"><i class="fas fa-home"></i> 返回首页</a>
+        </div>
+    </div>
+
+    <script src="./assets/js/jquery.min-3.2.1.js"></script>
+    <script>
+        $(document).ready(function() {
+            // 描述字数统计
+            $('#description').on('input', function() {
+                const count = $(this).val().length;
+                $('#descCount').text(count);
+            });
+
+            // 表单验证
+            function validateForm() {
+                let isValid = true;
+
+                // 清除之前的错误提示
+                $('.form-control').removeClass('error');
+                $('.error-message').hide();
+
+                // 网站名称验证
+                const siteName = $('#siteName').val().trim();
+                if (!siteName) {
+                    $('#siteName').addClass('error');
+                    $('#siteNameError').show();
+                    isValid = false;
+                }
+
+                // 网址验证
+                const siteUrl = $('#siteUrl').val().trim();
+                const urlPattern = /^https?:\/\/.+\..+/i;
+                if (!siteUrl || !urlPattern.test(siteUrl)) {
+                    $('#siteUrl').addClass('error');
+                    $('#siteUrlError').show();
+                    isValid = false;
+                }
+
+                // 分类验证
+                const category = $('#category').val();
+                if (!category) {
+                    $('#category').addClass('error');
+                    $('#categoryError').show();
+                    isValid = false;
+                }
+
+                // 描述验证
+                const description = $('#description').val().trim();
+                if (!description) {
+                    $('#description').addClass('error');
+                    $('#descriptionError').show();
+                    isValid = false;
+                }
+
+                // 邮箱验证
+                const email = $('#email').val().trim();
+                const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!email || !emailPattern.test(email)) {
+                    $('#email').addClass('error');
+                    $('#emailError').show();
+                    isValid = false;
+                }
+
+                return isValid;
+            }
+
+            // 表单提交
+            $('#submitForm').on('submit', function(e) {
+                e.preventDefault();
+
+                if (!validateForm()) {
+                    return;
+                }
+
+                // 禁用提交按钮
+                const $submitBtn = $('#submitBtn');
+                $submitBtn.prop('disabled', true).html('<i class="fas fa-spinner fa-spin"></i> 提交中...');
+
+                // 收集表单数据
+                const formData = {
+                    siteName: $('#siteName').val().trim(),
+                    siteUrl: $('#siteUrl').val().trim(),
+                    category: $('#category').val(),
+                    description: $('#description').val().trim(),
+                    keywords: $('#keywords').val().trim(),
+                    email: $('#email').val().trim(),
+                    contact: $('#contact').val().trim(),
+                    submitTime: new Date().toISOString()
+                };
+
+            });
+
+            // 输入时移除错误状态
+            $('.form-control').on('input change', function() {
+                $(this).removeClass('error');
+                $(this).siblings('.error-message').hide();
+            });
+        });
+    </script>
+</body>
+</html>

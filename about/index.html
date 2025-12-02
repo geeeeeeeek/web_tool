@@ -7,222 +7,331 @@
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta name="theme-color" content="#f9f9f9" />
-    <title>在线工具网</title>
+    <title>关于我们 - 在线工具网</title>
     <link rel="shortcut icon" href="../assets/images/favicon.png" />
-    <meta name="keywords" content="在线工具网" />
+    <meta name="keywords" content="在线工具网,关于我们" />
     <meta name="description" content="在线网址导航, 各类开发工具、绘图绘画工具、md5、在线ps、base64、房贷计算器等" />
 
     <link rel="stylesheet" id="block-library-css"
-        href="./assets/css/block-library.min-5.6.2.css" type="text/css" media="all" />
-    <link rel="stylesheet" id="iconfont-css" href="./assets/css/iconfont-3.03029.1.css"
+        href="../assets/css/block-library.min-5.6.2.css" type="text/css" media="all" />
+    <link rel="stylesheet" id="iconfont-css" href="../assets/css/iconfont-3.03029.1.css"
         type="text/css" media="all" />
-    <link rel="stylesheet" id="bootstrap-css" href="./assets/css/bootstrap.min-4.3.1.css"
+    <link rel="stylesheet" id="bootstrap-css" href="../assets/css/bootstrap.min-4.3.1.css"
         type="text/css" media="all" />
-    <link rel="stylesheet" id="fancybox-css" href="./assets/css/fancybox.min-3.5.7.css"
+    <link rel="stylesheet" id="iowen-css" href="../assets/css/style-3.03029.1.css"
         type="text/css" media="all" />
-    <link rel="stylesheet" id="iowen-css" href="./assets/css/style-3.03029.1.css"
+    <link rel="stylesheet" id="custom-css" href="../assets/css/custom-style.css"
         type="text/css" media="all" />
-    <link rel="stylesheet" id="custom-css" href="./assets/css/custom-style.css"
-        type="text/css" media="all" />
-    <link rel="stylesheet" id="fortawesome-css" href="./assets/fontawesome-5.15.4/css/all.min.css" type="text/css" />
-    <script type="text/javascript" src="./assets/js/jquery.min-3.2.1.js" id="jquery-js"></script>
-    <script type="text/javascript" src="./assets/js/content-search.js"  id="content-search-js"></script>
-
-
-
-
-     <script>
-        !function(p){"use strict";!function(t){var s=window,e=document,i=p,c="".concat("https:"===e.location.protocol?"https://":"http://","sdk.51.la/js-sdk-pro.min.js"),n=e.createElement("script"),r=e.getElementsByTagName("script")[0];n.type="text/javascript",n.setAttribute("charset","UTF-8"),n.async=!0,n.src=c,n.id="LA_COLLECT",i.d=n;var o=function(){s.LA.ids.push(i)};s.LA?s.LA.ids&&o():(s.LA=p,s.LA.ids=[],o()),r.parentNode.insertBefore(n,r)}()}({id:"3G9QRCtAm0z4ABfe",ck:"3G9QRCtAm0z4ABfe"});
-    </script>
-
-</head>
-
-
-
-
-<body class="page-body boxed-container">
-    <main role="main" class="flex-shrink-0">
-    <div class="container">
-        <h1 class="mt-5">关于作者</h1>
-        <div class="content">
-            <br/>
-<p>大家好，我叫Tom，来自于北京，专业是计算机技术。在过去的5年中，我一直在某大型互联网公司担任软件工程师，专注于Java/Python/Javascript的开发和研究。</p>
-<p>在大学期间，我就开始对编程产生浓厚的兴趣，通过自学和实践，我掌握了各种编程语言和开发工具。在jd工作的期间，我主要负责开发和维护公司的后端系统，涉及到的主要技术栈是Java和Spring Boot。在这个过程中，我积累了丰富的经验，能够熟练地使用Java进行后端开发，并且能够快速地解决开发过程中遇到的各种问题。</p>
-<p>除了Java和Spring Boot，我还熟悉Python、C++等其他编程语言，并且能够使用JavaScript进行前端开发。此外，我还熟悉数据库的操作，能够熟练使用MySQL、Oracle等数据库管理系统。</p>
-<p>在工作中，我注重团队协作，能够与团队成员保持良好的沟通和合作。同时，我还注重代码的可读性和可维护性，能够编写高质量的代码。我对于新技术的学习充满热情，并且能够将所学知识应用到实际工作中。</p>
-<p>除了工作和学习，我还积极参加各种技术社区和活动，通过与他人的交流和学习，不断提升自己的技术水平和解决问题的能力。</p>
-<br/>
-<h4 id="联系方式">联系方式</h4>
-<ul>
-<li>Wechat: lengqin1024(微信)</li>
-<li>Github: <a href="https://github.com/geeeeeeeek">https://github.com/geeeeeeeek</a></li>
-<li>个人主页: <a href="https://gitapp.cn">https://gitapp.cn</a></li>
-</ul>
-
-        </div>
-    </div>
-    </main>
+    <link rel="stylesheet" id="fortawesome-css" href="../assets/fontawesome-5.15.4/css/all.min.css" type="text/css" />
 
     <style>
-        .content {
-            font-size: 1.25rem;
-          }
+        body {
+            background: #f5f7fa;
+            padding: 20px 0;
+        }
 
-          .content h1,
-          .content h2,
-          .content h3,
-          .content h4 {
-            margin: 15px 10px 5px;
-          }
+        .about-container {
+            max-width: 900px;
+            margin: 50px auto;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
 
+        .about-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+        }
+
+        .about-header h1 {
+            font-size: 32px;
+            margin: 0 0 10px 0;
+            font-weight: 600;
+        }
+
+        .about-header p {
+            font-size: 16px;
+            margin: 0;
+            opacity: 0.9;
+        }
+
+        .about-content {
+            padding: 40px 30px;
+        }
+
+        .section {
+            margin-bottom: 35px;
+        }
+
+        .section:last-child {
+            margin-bottom: 0;
+        }
+
+        .section-title {
+            font-size: 22px;
+            color: #333;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #f0f0f0;
+            display: flex;
+            align-items: center;
+        }
+
+        .section-title i {
+            margin-right: 10px;
+            color: #667eea;
+        }
+
+        .section-content {
+            font-size: 15px;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        .section-content p {
+            margin-bottom: 15px;
+        }
+
+        .section-content p:last-child {
+            margin-bottom: 0;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .skill-item {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 6px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .skill-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .skill-item i {
+            font-size: 28px;
+            color: #667eea;
+            margin-bottom: 8px;
+        }
+
+        .skill-item .skill-name {
+            font-weight: 600;
+            color: #333;
+            font-size: 14px;
+        }
+
+        .contact-list {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0 0 0;
+        }
+
+        .contact-list li {
+            padding: 12px 15px;
+            margin-bottom: 10px;
+            background: #f8f9fa;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            transition: background 0.3s;
+        }
+
+        .contact-list li:hover {
+            background: #e9ecef;
+        }
+
+        .contact-list li i {
+            margin-right: 12px;
+            color: #667eea;
+            width: 20px;
+            text-align: center;
+        }
+
+        .contact-list li strong {
+            color: #333;
+            margin-right: 8px;
+            min-width: 80px;
+        }
+
+        .contact-list li a {
+            color: #667eea;
+            text-decoration: none;
+            word-break: break-all;
+        }
+
+        .contact-list li a:hover {
+            text-decoration: underline;
+        }
+
+        .back-home {
+            text-align: center;
+            padding: 30px;
+            background: #f8f9fa;
+        }
+
+        .back-home a {
+            display: inline-block;
+            padding: 10px 30px;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        .back-home a:hover {
+            background: #5568d3;
+            transform: translateY(-2px);
+        }
+
+        .back-home a i {
+            margin-right: 8px;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
+            border-left: 4px solid #667eea;
+            padding: 20px;
+            border-radius: 6px;
+            margin: 20px 0;
+        }
+
+        .highlight-box p {
+            margin: 0;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        @media (max-width: 768px) {
+            .about-container {
+                margin: 20px;
+            }
+
+            .about-header {
+                padding: 30px 20px;
+            }
+
+            .about-header h1 {
+                font-size: 26px;
+            }
+
+            .about-content {
+                padding: 30px 20px;
+            }
+
+            .skills-grid {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            }
+        }
     </style>
 
-        <footer class="main-footer footer-type-1 text-xs">
-            <div id="footer-tools" class="d-flex flex-column">
-                <a href="javascript:" id="go-to-up" class="btn rounded-circle go-up m-1" rel="go-top">
-                    <i class="iconfont icon-to-up"></i>
-                </a>
+    <script>
+        !function(p){"use strict";!function(t){var s=window,e=document,i=p,c="".concat("https:"===e.location.protocol?"https://":"http://","sdk.51.la/js-sdk-pro.min.js"),n=e.createElement("script"),r=e.getElementsByTagName("script")[0];n.type="text/javascript",n.setAttribute("charset","UTF-8"),n.async=!0,n.src=c,n.id="LA_COLLECT",i.d=n;var o=function(){s.LA.ids.push(i)};s.LA?s.LA.ids&&o():(s.LA=p,s.LA.ids=[],o()),r.parentNode.insertBefore(n,r)}()}({id:"3G9QRCtAm0z4ABfe",ck:"3G9QRCtAm0z4ABfe"});
+    </script>
+</head>
 
-                <a href="javascript:" data-toggle="modal" data-target="#search-modal" class="btn rounded-circle m-1"
-                    rel="search" one-link-mark="yes">
-                    <i class="iconfont icon-search"></i>
-                </a>
+<body class="io-grey-mode">
+    <div class="about-container">
+        <div class="about-header">
+            <h1><i class="fas fa-user-circle"></i> 关于作者</h1>
+            <p>热爱技术，专注于软件开发与创新</p>
+        </div>
 
-
-		<a href="javascript:" onclick="window.location.href='javascript:switchNightMode()'" class="btn rounded-circle switch-dark-mode m-1" id="yejian"
-                    data-toggle="tooltip" data-placement="left" title="日间模式">
-                    <i class="mode-ico iconfont icon-night"></i>
-                </a>
-
+        <div class="about-content">
+            <div class="section">
+                <h2 class="section-title">
+                    <i class="fas fa-id-card"></i>
+                    个人简介
+                </h2>
+                <div class="section-content">
+                    <div class="highlight-box">
+                        <p>大家好，我叫Tom，来自于北京，专业是计算机技术。在过去的5年中，我一直在某大型互联网公司担任软件工程师，专注于Java/Python/Javascript的开发和研究。</p>
+                    </div>
+                    <p>在大学期间，我就开始对编程产生浓厚的兴趣，通过自学和实践，我掌握了各种编程语言和开发工具。在工作的期间，我主要负责开发和维护公司的后端系统，涉及到的主要技术栈是Java和Spring Boot。在这个过程中，我积累了丰富的经验，能够熟练地使用Java进行后端开发，并且能够快速地解决开发过程中遇到的各种问题。</p>
+                    <p>除了Java和Spring Boot，我还熟悉Python、C++等其他编程语言，并且能够使用JavaScript进行前端开发。此外，我还熟悉数据库的操作，能够熟练使用MySQL、Oracle等数据库管理系统。</p>
+                </div>
             </div>
-            <div class="footer-inner">
-                <div class="footer-text">本站内容源自互联网，如有内容侵犯了你的权益，请联系删除相关内容，联系邮箱：kefu308@gmail.com <br/>© 2021 - 2023 By <a href="https://github.com/geeeeeeeek/web_tool">Web_tool</a> | <a href="http://beian.miit.gov.cn/">京ICP备2023018588号</a><br/></div>
+
+            <div class="section">
+                <h2 class="section-title">
+                    <i class="fas fa-code"></i>
+                    技术栈
+                </h2>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <i class="fab fa-java"></i>
+                        <div class="skill-name">Java / Spring Boot</div>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-python"></i>
+                        <div class="skill-name">Python</div>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-js"></i>
+                        <div class="skill-name">JavaScript</div>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-database"></i>
+                        <div class="skill-name">MySQL / Oracle</div>
+                    </div>
+                </div>
             </div>
-        </footer>
+
+            <div class="section">
+                <h2 class="section-title">
+                    <i class="fas fa-heart"></i>
+                    工作理念
+                </h2>
+                <div class="section-content">
+                    <p>在工作中，我注重团队协作，能够与团队成员保持良好的沟通和合作。同时，我还注重代码的可读性和可维护性，能够编写高质量的代码。我对于新技术的学习充满热情，并且能够将所学技术应用到实际工作中。</p>
+                    <p>除了工作和学习，我还积极参加各种技术社区和活动，通过与他人的交流和学习，不断提升自己的技术水平和解决问题的能力。</p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">
+                    <i class="fas fa-address-book"></i>
+                    联系方式
+                </h2>
+                <ul class="contact-list">
+                    <li>
+                        <i class="fab fa-github"></i>
+                        <strong>GitHub:</strong>
+                        <a href="https://github.com/geeeeeeeek" target="_blank">https://github.com/geeeeeeeek</a>
+                    </li>
+                    <li>
+                        <i class="fas fa-globe"></i>
+                        <strong>个人主页:</strong>
+                        <a href="https://web.gitapp.cn" target="_blank">https://web.gitapp.cn</a>
+                    </li>
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        <strong>邮箱:</strong>
+                        <a href="mailto:kefu308@gmail.com">kefu308@gmail.com</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="back-home">
+            <a href="/">
+                <i class="fas fa-home"></i>
+                返回首页
+            </a>
+        </div>
     </div>
-</div>
 
-
-<script type='text/javascript' src='./assets/js/jquery.ui.touch-punch.min-0.2.2.js' id='jqueryui-touch-js'></script>
-<script type='text/javascript' src='./assets/js/clipboard.min-5.6.2.js' id='clipboard-js'></script>
-<script type='text/javascript' src='./assets/js/tooltip-extend.js' id='iplaycode-nav-js'></script>
-<script type='text/javascript' id='popper-js-extra'>
-
-
-var theme = {"ajaxurl":"","addico":"https:\/\/nav.baidu.cn\/wp-content\/themes\/onenav\/images\/add.png","order":"asc","formpostion":"top","defaultclass":"io-grey-mode","isCustomize":"1","icourl":"","icopng":".png","urlformat":"1","customizemax":"10","newWindow":"0","lazyload":"1","minNav":"1","loading":"1","hotWords":"baidu","classColumns":" col-sm-6 col-md-4 col-xl-5a col-xxl-6a ","apikey":"TWpBeU1UVTNOekk1TWpVMEIvZ1M2bFVIQllUMmxsV1dZelkxQTVPVzB3UW04eldGQmxhM3BNWW14bVNtWk4="};
-
-</script>
-<script type='text/javascript' src='./assets/js/popper.min.js' id='popper-js'></script>
-<script type='text/javascript' src='./assets/js/bootstrap.min-4.3.1.js' id='bootstrap-js'></script>
-<script type='text/javascript' src='./assets/js/theia-sticky-sidebar-1.5.0.js' id='sidebar-js'></script>
-<script type='text/javascript' src='./assets/js/lazyload.min-12.4.0.js' id='lazyload-js'></script>
-<script type='text/javascript' src='./assets/js/fancybox.min-3.5.7.js' id='lightbox-js-js'></script>
-
-<script type='text/javascript' src='./assets/js/app-anim.js' id='appanim-js'></script>
-
-<script type="text/javascript">
-    $(document).ready(function(){
-        var siteWelcome = $('#loading');
-        siteWelcome.addClass('close');
-        setTimeout(function() {
-            siteWelcome.remove();
-        }, 600);
-    });
-</script>
-<script>
-    $(document).ready(function(){
-        setTimeout(function () {
-            if ($('a.smooth[href="' + window.location.hash + '"]')[0]) {
-                $('a.smooth[href="' + window.location.hash + '"]').click();
-            }else if (window.location.hash != '') {
-                $("html, body").animate({
-                    scrollTop: $(window.location.hash).offset().top - 90
-                }, {
-                    duration: 500,
-                    easing: "swing"
-                });
-            }
-        }, 300);
-        $(document).on('click','a.smooth',function(ev) {
-            if($('#sidebar').hasClass('show') && !$(this).hasClass('change-href')){
-                $('#sidebar').modal('toggle');
-            }
-            if($(this).attr("href").substr(0, 1) == "#"){
-                $("html, body").animate({
-                    scrollTop: $($(this).attr("href")).offset().top - 90
-                }, {
-                    duration: 500,
-                    easing: "swing"
-                });
-            }
-            if($(this).hasClass('go-search-btn')){
-                $('#search-text').focus();
-            }
-            if(!$(this).hasClass('change-href')){
-                var menu =  $("a"+$(this).attr("href"));
-                menu.click();
-                toTarget(menu.parent().parent(),true,true);
-            }
-        });
-        $(document).on('click','a.tab-noajax',function(ev) {
-            var url = $(this).data('link');
-            if(url)
-                $(this).parents('.d-flex.flex-fill.flex-tab').children('.btn-move.tab-move').show().attr('href', url);
-            else
-                $(this).parents('.d-flex.flex-fill.flex-tab').children('.btn-move.tab-move').hide();
-        });
-
-    });
-</script>
-
-<script>
-
-(function(){
-    if(document.cookie.replace(/(?:(?:^|.*;\s*)night\s*\=\s*([^;]*).*$)|^.*$/, "$1") === ''){
-        if(new Date().getHours() > 22 || new Date().getHours() < 6){
-            document.body.classList.remove('io-black-mode');
-            document.body.classList.add('io-grey-mode');
-            document.cookie = "night=1;path=/";
-            console.log('夜间模式开启');
-        }else{
-            document.body.classList.remove('night');
-            document.cookie = "night=0;path=/";
-            console.log('夜间模式关闭');
-        }
-    }else{
-        var night = document.cookie.replace(/(?:(?:^|.*;\s*)night\s*\=\s*([^;]*).*$)|^.*$/, "$1") || '0';
-        if(night == '0'){
-            document.body.classList.remove('night');
-        }else if(night == '1'){
-            document.body.classList.add('night');
-        }
-    }
-})();
-
-$("#search-bg").css("background-image", "url(assets\/images\/bg-dna.jpg)");
-function switchNightMode(){
-    var night = document.cookie.replace(/(?:(?:^|.*;\s*)night\s*\=\s*([^;]*).*$)|^.*$/, "$1") || '0';
-    if(night == '0'){
-	$("#search-bg").css("background-image", "url(assets\/images\/bg-dna.jpg)");
-        document.body.classList.remove('io-grey-mode');
-        document.body.classList.add('io-black-mode');
-        document.cookie = "night=1;path=/"
-        console.log(' ');
-        $(".switch-dark-mode").attr("data-original-title","日间模式");
-        $(".mode-ico").removeClass("icon-night");
-        $(".mode-ico").addClass("icon-light");
-    }else{
-	$("#search-bg").css("background-image", "url(assets\/images\/bg-dna.jpg)")
-        document.body.classList.remove('io-black-mode');
-        document.body.classList.add('io-grey-mode');
-        document.cookie = "night=0;path=/"
-        console.log(' ');
-        $(".switch-dark-mode").attr("data-original-title","夜间模式");
-        $(".mode-ico").removeClass("icon-light");
-        $(".mode-ico").addClass("icon-night");
-    }
-}
-</script>
+    <script src="../assets/js/jquery.min-3.2.1.js"></script>
 </body>
 </html>
-
