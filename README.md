@@ -354,13 +354,9 @@ web_tool/
 - [Vercel 部署文档](https://vercel.com/docs)
 - [Let's Encrypt 证书](https://letsencrypt.org/)
 
-## 许可证
+## vps服务器推荐
 
-MIT License
-
-## 贡献
-
-欢迎提交 Issue 和 Pull Request！
+https://github.com/geeeeeeeek/cheap_vps
 
 ## 联系方式
 
