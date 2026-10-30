@@ -356,13 +356,12 @@ web_tool/
 
 ## vps服务器推荐
 
-https://github.com/geeeeeeeek/cheap_vps
+[https://github.com/geeeeeeeek/cheap_vps](https://github.com/geeeeeeeek/vps_server)
 
 ## 联系方式
 
 - GitHub: https://github.com/geeeeeeeek
-- 个人主页: https://web.gitapp.cn
-- Email: kefu308@gmail.com
+
 
 ---
 
