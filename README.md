@@ -356,7 +356,7 @@ web_tool/
 
 ## vps服务器推荐
 
-[https://github.com/geeeeeeeek/cheap_vps](https://github.com/geeeeeeeek/vps_server)
+[https://github.com/geeeeeeeek/vps_server](https://github.com/geeeeeeeek/vps_server)
 
 ## 联系方式
 
